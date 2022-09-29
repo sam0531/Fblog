@@ -1,0 +1,904 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+
+}
+:root {
+    background-color: darkslategrey;
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+
+/* Welcome Message -------------------------------------------------------------------------- */
+
+
+.welcomediv {
+    color: white;
+    height: 100vh;
+    padding-top: 100px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    display: grid;
+    grid-template-columns: auto auto;
+    
+}
+
+.emoji1 {
+    font-size: 50px;
+    
+}
+
+.siren {
+    color: yellow;
+    font-size: 40px;
+}
+
+.scrolldown {
+    
+    padding-top: 50px;
+    font-size: 20px;
+    color: white;
+    animation: scrollupdown 3s ease-in-out infinite;
+}
+
+@keyframes scrollupdown {
+    20% {transform: translateY(-50px);}
+    40% {transform: translateY(0px);}
+    60% {transform: translateY(-30px);}
+    80% {transform: translateY(0px);}
+}
+
+.downemoji {
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.welcometext{
+    animation: fadeanime ease-in 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeanime {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.lottie {
+    animation: fadelottieanime ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadelottieanime {
+    0% {opacity: 0; position: absolute; right: -400px;}
+    100% {opacity: 1; right: 1200px;}
+}
+
+
+/* Navbar ------------------------------------------------------------------------------------- */
+
+
+.navlogo {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.navlogoTHE {
+    color: white;
+    font-size: 38px;
+    transform: rotateZ(-90deg);
+}
+
+.navlogoSIREN {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navlink {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.navlink:hover {
+    color: white;
+    
+}
+
+
+.content-below-nav {
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+
+}
+
+
+/* Home Page CSS -----------------------------------------------------------------------------  */
+
+
+.trendcard, .bollycard {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.trendcard p, .bollycard p {
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+
+.trendcard span, .bollycard span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.trendcard img, .bollycard img {
+    border-radius: 5px;
+}
+
+.trendcardparent {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 1000px;
+    
+
+}
+
+
+#c0{
+    width: 100%;
+    height: fit-content;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    position: relative;
+    
+}
+
+#c0 p {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    font-size: 35px;
+    width: 180px;
+    color: white;
+
+}
+
+#c0 span {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 400px;
+    left: 35px;
+    font-size: 14px;
+}
+
+#c1{
+    width: 300px;
+    height: 230px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#c2{
+    width: 300px;
+    height: 230px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#c3{
+    width: 300px;
+    height: 230px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#c4{
+    width: 300px;
+    height: 230px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.bollycardparent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.bollyheading {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    width: fit-content;
+}
+
+.bollyheading::after {
+    content: " ";
+    background-color: aqua;
+    height: 5px;
+    width: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.bollyparent:hover .bollyheading::after { 
+    width: 160px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.bollycard img {
+    height: 160px;
+}
+
+
+/* All Page CSS --------------------------------------------------------------------- */
+
+
+.allcardheading {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    width: fit-content;
+
+}
+
+.allcardheading::after {
+    content: " ";
+    background-color: aqua;
+    height: 5px;
+    width: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.allcardpage:hover .allcardheading::after { 
+    width: 160px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.allcardpage {
+    width: 60vw;
+}
+
+.allcardparent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+
+
+.allcard {
+    padding: 10px;
+    width: 45vw;
+    height: 350px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.allcard img {
+    border-radius: 5px;
+    width: 450px;
+    height: 300px;
+}
+
+.alltextflex {
+    padding-left: 20px;
+}
+
+.alltextflex p {
+    font-size: 22px;
+    width: 90%;
+    color: white;
+}
+
+.alltextflex div {
+    font-size: 14px;
+    width: 70%;
+    text-overflow: clip;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.alltextflex span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.allcardgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 50px;
+}
+
+/* Top Post Side CSS ------------------------------------------------------------------------- */
+
+.toppostcontainer {
+    padding-top: 50px;
+}
+
+.toppostcard {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.toppostcard p {
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+
+.toppostcard span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.toppostcard img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.toppostcardparent {
+    display: grid;
+    grid-template-columns: auto;
+    height: auto;
+    
+
+}
+
+.toppostheading {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    width: fit-content;
+}
+
+.toppostheading::after {
+    content: " ";
+    background-color: aqua;
+    height: 5px;
+    width: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.toppostcontainer:hover .toppostheading::after { 
+    width: 160px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+
+/* Individual Page CSS ---------------------------------------------------------------- */
+
+
+.indpage {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.indtitle {
+    color: white;
+}
+
+.induserimg {
+    width: 30%;
+    height: auto;
+}
+.indimgandname {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.indauthorandpublish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.indpublishdate {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+.indauthor {
+    color: white;
+}
+
+.icons-social {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    gap: 5px;
+}
+
+.indimg {
+    width: 100%;
+}
+
+.inddescription {
+    color: white;
+}
+
+.indauthorinfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+
+/* Responsive CSS ------------------------------------------------------------- */
+
+@media (max-width: 1024px){
+
+    /* Individual Page ------------------ */
+
+    .indtitle {
+        font-size: 20px;
+    }
+    .induserimg {
+        width: 35%;
+        height: auto;
+    }
+    .indimgandname {
+        width: 40%;
+    }
+
+    /* All Page CSS --------------------- */
+
+    .allcardgrid {
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .allcardpage {
+        width: 60%;
+    }
+
+    .allcard {
+        width: 45vw;
+        height: auto;
+    }
+    .allcard img {
+        width: 280px;
+        height: 150px;
+    }
+
+    .alltextflex p {
+        font-size: 15px;
+        width: 90%;
+    }
+    
+    .alltextflex div {
+        font-size: 13px;
+        width: 70%;
+    }
+    
+    .alltextflex span {
+        font-size: 11px;
+    }
+
+    .allcardheading {
+        font-size: 28px;
+    }
+
+    
+/* Top Post Side CSS ----------------------- */
+
+.toppostcontainer {
+    padding-top: 50px;
+    width: fit-content;
+    padding-left: 20px;
+
+}
+
+.toppostheading {
+    font-size: 25px;
+    width: fit-content;
+    padding-left: 5px;
+    
+}
+.toppostcard {
+    width: 250px;
+}
+
+.toppostcard p {
+    font-size: 13px;
+    width: 90%;
+    margin: auto;
+}
+
+.toppostcard span {
+    font-size: 11px;
+}
+
+.toppostcard img {
+    width: 100%;
+}
+
+
+/* Home Page ---------------------------- */
+
+
+.content-below-nav {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+
+}
+
+.trendcard, .bollycard {
+    padding: 10px;
+    width: 350px;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.trendcard p, .bollycard p {
+    font-size: 13px;
+    width: 90%;
+    margin: auto;
+}
+
+.trendcard span, .bollycard span {
+    font-size: 12px;
+}
+
+.trendcard img, .bollycard img {
+    border-radius: 5px;
+}
+
+.trendcardparent {
+    display: grid;
+    height: 800px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+
+#c0{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+
+#c0 p {
+    font-size: 28px;
+    width: 180px;
+}
+
+#c0 span {
+    font-size: 14px;
+    top: 280px;
+}
+
+#c1{
+    width: 200px;
+    height: 150px;
+
+}
+
+#c2{
+    width: 200px;
+    height: 150px;
+}
+
+#c3{
+    width: 200px;
+    height: 150px;
+
+}
+
+#c4{
+    width: 200px;
+    height: 150px;
+}
+
+.bollycardparent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bollyheading {
+    font-size: 30px;
+}
+
+.bollycard img {
+    height: auto;
+}
+
+
+}
+
+@media (max-width: 375px){
+
+    
+/* Individual Page ------------------ */
+
+    .indpage {
+        width: 90%;
+    }
+
+    .indtitle {
+        font-size: 20px;
+        
+    }
+    .induserimg {
+        width: 30%;
+        height: auto;
+    }
+    .indimgandname {
+        width: 70%;
+    }
+    .icons-social {
+        color: white;
+        font-size: 16px;
+        display: flex;
+        gap: 5px;
+    }
+    .indauthor {
+        font-size: 14px;
+    }
+    .indpublishdate {
+        font-size: 10px;
+    }
+    .inddescription{
+        font-size: 15px;
+    }
+
+/* Navbar ------------------------------------------------------------------------------------- */
+
+
+    .navlogoTHE {
+        font-size: 25px;
+    }
+
+    .navlogoSIREN {
+        font-size: 55px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navlink {
+        font-size: 11px;
+    }
+
+
+/* All Page CSS --------------------- */
+        
+    .allcardgrid {
+        display: flex;
+        flex-direction: row;
+        padding-top: 30px;
+
+    }
+
+    .allcardpage {
+        width: 60%;
+    }
+
+    .allcard {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .allcard img {
+        width: 200px;
+        height: 120px;
+    }
+
+    .alltextflex p {
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .alltextflex div {
+        font-size: 12px;
+        width: 80%;
+    }
+
+    .alltextflex span {
+        font-size: 10px;
+    }
+
+    .allcardheading {
+        font-size: 25px;
+    }
+    .allcardparent {
+        gap: 20px;
+    }
+
+/* Top Post Side CSS ----------------------- */
+
+    .toppostcontainer {
+        display: none;
+    }
+
+
+
+
+/* Home Page Bollywood CSS -------------------- */
+
+
+    .trendcard, .bollycard {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .trendcard p, .bollycard p {
+        font-size: 14px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .trendcard span, .bollycard span {
+        font-size: 13px;
+    }
+
+    .bollyparent {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .bollycardparent {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90vw;
+        gap: 10px;
+    }
+    
+    .bollyheading {
+        font-size: 30px;
+    }
+    
+    .bollycard img {
+        height: auto;
+    }
+
+/* Home Page Trending CSS --------------------- */
+
+    .trendcardparent {
+        display: grid;
+        height: 1300px;
+        width: 90vw;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+
+    #c0{
+        width: 320px;
+        height: 220px;
+        position: absolute;
+        top: 200px;
+        left: 25px;
+    }
+    
+    #c0 p {
+        font-size: 14px;
+        width: 90%;
+        position: absolute;
+        top: 180px;
+    }
+    
+    #c0 span {
+        font-size: 13px;
+        position: absolute;
+        top: 220px;
+        left: 170px;
+    }
+    
+    #c1{
+        width: 320px;
+        height: 220px;
+        position: absolute;
+        top: 440px;
+        left: 25px;
+    
+    }
+    
+    #c2{
+        width: 320px;
+        height: 220px;
+        position: absolute;
+        top: 680px;
+        left: 25px;
+    }
+    
+    #c3{
+        width: 320px;
+        height: 220px;
+        position: absolute;
+        top: 920px;
+        left: 25px;
+    
+    }
+    
+    #c4{
+        width: 320px;
+        height: 220px;
+        position: absolute;
+        top: 1160px;
+        left: 25px;
+    }
+    
+
+
+
+
+
+
+
+
+}
+
